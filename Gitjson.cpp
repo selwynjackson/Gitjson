@@ -1,17 +1,35 @@
 //---------------------------------------------------------------------------
 
-#include <System.hpp>
+#include <vcl.h>
 #pragma hdrstop
-#pragma package(smart_init)
+#include <tchar.h>
 //---------------------------------------------------------------------------
-
-//   Package source.
+USEFORM("GitjsonMain.cpp", Form1);
 //---------------------------------------------------------------------------
-
-
-#pragma argsused
-extern "C" int _libmain(unsigned long reason)
+int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
-    return 1;
+    try
+    {
+         Application->Initialize();
+         Application->MainFormOnTaskBar = true;
+         Application->CreateForm(__classid(TForm1), &Form1);
+         Application->Run();
+    }
+    catch (Exception &exception)
+    {
+         Application->ShowException(&exception);
+    }
+    catch (...)
+    {
+         try
+         {
+             throw Exception("");
+         }
+         catch (Exception &exception)
+         {
+             Application->ShowException(&exception);
+         }
+    }
+    return 0;
 }
 //---------------------------------------------------------------------------
