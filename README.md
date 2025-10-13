@@ -19,7 +19,7 @@ Use: Gitjson <sourcefile.json> <destinationfile>
 Project is currently set to 'D:\GitWork\NodeRED\'
 ```
 The project option is useful for moving the json file from the downloads directory directly into the project directory, 
-with the flows*.json filename converted to the first label in the json file.
+with the flows*.json filename converted to the first label in the json file (usually the title of the first flow).
 
 The utility must be stored in a directory in the path, or the path must be updated to include this utility. 
 Then the .json file should be opened with the utility, and the association should be be set as always.
