@@ -18,5 +18,5 @@ Use: Gitjson <sourcefile.json> <destinationfile>
      Gitjson /p - to clear project directory
 Project is currently set to 'D:\GitWork\NodeRED\'
 ```
-The project is useful for moving the json file from the downloads directory directly into the project directory, 
+The project option is useful for moving the json file from the downloads directory directly into the project directory, 
 with the flows*.json filename converted to the first label in the json file.
