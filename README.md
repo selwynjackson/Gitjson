@@ -7,7 +7,7 @@ The Gitjson converts all '\n' sequences to '\n>>\t\t' so that it is easy to view
 The same utility can unconvert the files back to the original format.
 
 When running the utility without arguments, the use of the utility is shown:
-
+```
 Gitjson - Version 1.0 - Convert NodeRED json for use by Git and vica versa
 Text '\n' is converted to 'LF >> tab tab'
 Use: Gitjson <sourcefile.json> <destinationfile>
@@ -17,6 +17,6 @@ Use: Gitjson <sourcefile.json> <destinationfile>
      Gitjson /p <project> - to set project directory
      Gitjson /p - to clear project directory
 Project is currently set to 'D:\GitWork\NodeRED\'
-
+```
 The project is useful for moving the json file from the downloads directory directly into the project directory, 
 with the flows*.json filename converted to the first label in the json file.
