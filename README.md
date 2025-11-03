@@ -23,3 +23,57 @@ with the flows*.json filename converted to the first label in the json file (usu
 
 The utility must be stored in a directory in the path, or the path must be updated to include this utility. 
 Then the .json file should be opened with the utility, and the association should be be set as always.
+
+For example:  
+```
+    {
+        "id": "409204e812490f3e",
+        "type": "function",
+        "z": "037f60a1d649c5d0",
+        "g": "e9b8350557492c20",
+        "name": "add",
+        "func": "var val1 = parseFloat(flow.get(\"val1\") || \"0\");\nvar val2 = parseFloat(flow.get(\"val2\") || \"0\");\nmsg.payload = val1 + val2;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1140,
+        "wires": [
+            [
+                "00778b9e2763b416",
+                "95548b5957bf4a93"
+            ]
+        ]
+    },
+```
+is converted to:
+```
+    {
+        "id": "409204e812490f3e",
+        "type": "function",
+        "z": "037f60a1d649c5d0",
+        "g": "e9b8350557492c20",
+        "name": "add",
+        "func": "var val1 = parseFloat(flow.get(\"val1\") || \"0\");
+>>		var val2 = parseFloat(flow.get(\"val2\") || \"0\");
+>>		msg.payload = val1 + val2;
+>>		return msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 1140,
+        "wires": [
+            [
+                "00778b9e2763b416",
+                "95548b5957bf4a93"
+            ]
+        ]
+    },
+```
