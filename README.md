@@ -24,7 +24,7 @@ with the flows*.json filename converted to the first label in the json file (usu
 The utility must be stored in a directory in the path, or the path must be updated to include this utility. 
 Then the .json file should be opened with the utility, and the association should be be set as always.
 
-For example the json file:  
+For example, the json file:  
 ```
     {
         "id": "409204e812490f3e",
